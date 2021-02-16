@@ -1,0 +1,32 @@
+{
+    "vms": [
+        {
+            "name": "VM1",
+            "ip": "10.102.39.1",
+            "os": "linux",
+            "username": "dummy_user1",
+            "password": "dummy_password1"
+        },
+        {
+            "name": "VM2",
+            "ip": "10.102.39.2",
+            "os": "linux",
+            "username": "dummy_user2",
+            "password": "dummy_password2"
+        },
+        {
+            "name": "VM3",
+            "ip": "10.102.39.3",
+            "os": "windows",
+            "username": "dummy_user3",
+            "password": "dummy_password3"
+        },
+        {
+            "name": "VM4",
+            "ip": "10.102.39.4",
+            "os": "linux",
+            "username": "dummy_user4",
+            "password": "dummy_password"
+        }
+    ]
+}
