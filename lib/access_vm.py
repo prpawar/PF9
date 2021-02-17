@@ -1,10 +1,14 @@
 import paramiko
 
 class AccessVM(object):
+    """
+    This class defines methods to ssh to vm and run given commands
+    """
     def __init__(self, *args, **kwargs):
         self.ip = kwargs.get("ip")
         self.username = kwargs.get("username")
         self.password = kwargs.get("password")
+        self.get_vm_connection()
 
     def get_vm_connection(self):
         ssh_client = paramiko.SSHClient()
@@ -14,12 +18,11 @@ class AccessVM(object):
             username=self.username,
             password=self.password
         )
-        return ssh_client
+        self.ssh_client = ssh_client
 
-    @staticmethod
-    def execute_ssh_command(ssh_client, command):
+    def execute_ssh_command(self, command):
         # returns stdin, stdout, stderr
-        return ssh_client.exec_command(command)
+        return self.ssh_client.exec_command(command)
 
     """
     @staticmethod
@@ -27,7 +30,6 @@ class AccessVM(object):
         return ssh.open_sftp().put(source_path, dest_path)
     """
 
-    @staticmethod
-    def cleanup_vm(ssh_client):
+    def cleanup_vm(self):
         # returns stdin, stdout, stderr
-        return ssh_client.execute_ssh_command("rm -rf /tmp/*")
+        return self.ssh_client.exec_command("rm -rf /tmp/*")

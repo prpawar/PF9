@@ -1,0 +1,84 @@
+prashantpawr@bb:~/platform/PF9$ python runner.py 
+[UserThread-0]: Wants to monitor 172.19.0.1
+[UserThread-1]: Wants to monitor 172.17.0.1
+[UserThread-2]: Wants to monitor 172.21.0.1
+[UserThread-3]: Wants to monitor 172.17.0.1
+[UserThread-0]: Checkout VM
+[UserThread-1]: Checkout VM
+[ADMIN]: VM with IP 172.19.0.1 is checked out by UserThread-0
+[UserThread-2]: Checkout VM
+[ADMIN]: VM with IP 172.21.0.1 is checked out by UserThread-2
+[ADMIN]: VM with IP 172.17.0.1 is checked out by UserThread-1
+[UserThread-3]: Checkout VM
+[ADMIN]: VM with ip 172.17.0.1 is not available at this moment, please try after sometime.
+[UserThread-1]: Started working
+[UserThread-2]: Started working
+[UserThread-0]: Started working
+Killed
+
+
+
+prashantpawr@bb:~/platform/PF9$ python runner.py 
+[ADMIN]: Seems like admin crashed earlier, restoring vm pool
+[UserThread-0]: Wants to monitor 172.19.0.1
+[UserThread-1]: Wants to monitor 172.17.0.1
+[UserThread-2]: Wants to monitor 172.21.0.1
+[UserThread-3]: Wants to monitor 172.17.0.1
+[UserThread-0]: Checkout VM
+[ADMIN]: VM with ip 172.19.0.1 is not available at this moment, please try after sometime.
+[UserThread-0]: Seems like I am holding VM 172.19.0.1, checkin this VM
+[UserThread-1]: Checkout VM
+[ADMIN]: VM with ip 172.17.0.1 is not available at this moment, please try after sometime.
+[UserThread-1]: Seems like I am holding VM 172.17.0.1, checkin this VM
+[UserThread-1]: Checkin VM
+[UserThread-0]: Checkin VM
+[UserThread-2]: Checkout VM
+[ADMIN]: VM with ip 172.21.0.1 is not available at this moment, please try after sometime.
+[UserThread-2]: Seems like I am holding VM 172.21.0.1, checkin this VM
+[UserThread-2]: Checkin VM
+[UserThread-3]: Checkout VM
+[ADMIN]: VM with ip 172.17.0.1 is not available at this moment, please try after sometime.
+[ADMIN]: VM with IP 172.19.0.1 is cleaned up
+[ADMIN]: VM with ip 172.19.0.1 is added in pool back
+[UserThread-0]: Checkout VM
+[ADMIN]: VM with IP 172.19.0.1 is checked out by UserThread-0
+[UserThread-0]: Started working
+[ADMIN]: VM with IP 172.17.0.1 is cleaned up
+[ADMIN]: VM with ip 172.17.0.1 is added in pool back
+[UserThread-1]: Checkout VM
+[ADMIN]: VM with IP 172.17.0.1 is checked out by UserThread-1
+[ADMIN]: VM with IP 172.21.0.1 is cleaned up
+[ADMIN]: VM with ip 172.21.0.1 is added in pool back
+[UserThread-2]: Checkout VM
+[ADMIN]: VM with IP 172.21.0.1 is checked out by UserThread-2
+[UserThread-1]: Started working
+[UserThread-2]: Started working
+[UserThread-0]: Memory Utilisation of 172.19.0.1 is ['      4029860 K total memory\n', '       549672 K used memory\n', '       783996 K active memory\n', '       499328 K inactive memory\n', '      2520616 K free memory\n', '       161816 K buffer memory\n', '       797756 K swap cache\n', '            0 K total swap\n', '            0 K used swap\n', '            0 K free swap\n', '        23847 non-nice user cpu ticks\n', '          255 nice user cpu ticks\n', '        13004 system cpu ticks\n', '      7184523 idle cpu ticks\n', '        19789 IO-wait cpu ticks\n', '            0 IRQ cpu ticks\n', '          593 softirq cpu ticks\n', '          637 stolen cpu ticks\n', '       817224 pages paged in\n', '       616452 pages paged out\n', '            0 pages swapped in\n', '            0 pages swapped out\n', '      2333570 interrupts\n', '      5163764 CPU context switches\n', '   1613569589 boot time\n', '        27888 forks\n']
+[UserThread-0]: Done working
+[UserThread-0]: Checkin VM
+[UserThread-1]: Memory Utilisation of 172.17.0.1 is ['      4029860 K total memory\n', '       556656 K used memory\n', '       790924 K active memory\n', '       499332 K inactive memory\n', '      2513580 K free memory\n', '       161816 K buffer memory\n', '       797808 K swap cache\n', '            0 K total swap\n', '            0 K used swap\n', '            0 K free swap\n', '        23867 non-nice user cpu ticks\n', '          255 nice user cpu ticks\n', '        13011 system cpu ticks\n', '      7184529 idle cpu ticks\n', '        19789 IO-wait cpu ticks\n', '            0 IRQ cpu ticks\n', '          593 softirq cpu ticks\n', '          637 stolen cpu ticks\n', '       817224 pages paged in\n', '       616452 pages paged out\n', '            0 pages swapped in\n', '            0 pages swapped out\n', '      2333988 interrupts\n', '      5165452 CPU context switches\n', '   1613569589 boot time\n', '        27915 forks\n']
+[UserThread-1]: Done working
+[UserThread-1]: Checkin VM
+[UserThread-2]: Memory Utilisation of 172.21.0.1 is ['      4029860 K total memory\n', '       553752 K used memory\n', '       787624 K active memory\n', '       499332 K inactive memory\n', '      2516484 K free memory\n', '       161816 K buffer memory\n', '       797808 K swap cache\n', '            0 K total swap\n', '            0 K used swap\n', '            0 K free swap\n', '        23875 non-nice user cpu ticks\n', '          255 nice user cpu ticks\n', '        13014 system cpu ticks\n', '      7184529 idle cpu ticks\n', '        19789 IO-wait cpu ticks\n', '            0 IRQ cpu ticks\n', '          593 softirq cpu ticks\n', '          637 stolen cpu ticks\n', '       817224 pages paged in\n', '       616452 pages paged out\n', '            0 pages swapped in\n', '            0 pages swapped out\n', '      2334053 interrupts\n', '      5166005 CPU context switches\n', '   1613569589 boot time\n', '        27930 forks\n']
+[UserThread-2]: Done working
+[UserThread-2]: Checkin VM
+[ADMIN]: VM with IP 172.19.0.1 is cleaned up
+[ADMIN]: VM with ip 172.19.0.1 is added in pool back
+[UserThread-0]: Finished
+[ADMIN]: VM with IP 172.17.0.1 is cleaned up
+[ADMIN]: VM with ip 172.17.0.1 is added in pool back
+[UserThread-1]: Finished
+[ADMIN]: VM with IP 172.21.0.1 is cleaned up
+[ADMIN]: VM with ip 172.21.0.1 is added in pool back
+[UserThread-2]: Finished
+[UserThread-3]: Retrying after 10 secs
+[UserThread-3]: Checkout VM
+[ADMIN]: VM with IP 172.17.0.1 is checked out by UserThread-3
+[UserThread-3]: Started working
+[UserThread-3]: Memory Utilisation of 172.17.0.1 is ['      4029860 K total memory\n', '       559460 K used memory\n', '       790192 K active memory\n', '       499348 K inactive memory\n', '      2510316 K free memory\n', '       161820 K buffer memory\n', '       798264 K swap cache\n', '            0 K total swap\n', '            0 K used swap\n', '            0 K free swap\n', '        23980 non-nice user cpu ticks\n', '          255 nice user cpu ticks\n', '        13069 system cpu ticks\n', '      7185186 idle cpu ticks\n', '        19789 IO-wait cpu ticks\n', '            0 IRQ cpu ticks\n', '          593 softirq cpu ticks\n', '          638 stolen cpu ticks\n', '       817224 pages paged in\n', '       616528 pages paged out\n', '            0 pages swapped in\n', '            0 pages swapped out\n', '      2336487 interrupts\n', '      5177992 CPU context switches\n', '   1613569589 boot time\n', '        28118 forks\n']
+[UserThread-3]: Done working
+[UserThread-3]: Checkin VM
+[ADMIN]: VM with IP 172.17.0.1 is cleaned up
+[ADMIN]: VM with ip 172.17.0.1 is added in pool back
+[UserThread-3]: Finished
+Exiting Main Thread

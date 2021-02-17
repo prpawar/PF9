@@ -1,6 +1,9 @@
 
 class VMFactory(object):
-    # not exactly factory class though
+    """
+    This class is used to serialize vm details mentioned in data file
+    not exactly factory class though
+    """
     def __init__(self, *args, **kwargs):
         self.name = kwargs.get("name")
         self.ip = kwargs.get("ip")

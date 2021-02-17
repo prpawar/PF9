@@ -3,6 +3,10 @@ import json
 from lib.vm_factory import VMFactory
 
 class VMDataParser(object):
+    """
+    This class gathers vm details from file.
+    And maps them based on their ips in method get_vm_pool
+    """
     def __init__(self, filepath):
         self.filepath = filepath
         assert os.path.exists(self.filepath), "Given file does not exists"
