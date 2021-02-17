@@ -1,6 +1,7 @@
 Here we are relying on 2 primary classes.
 
 Administrator
+
     Administer is a singleton object, there could be only admin present.
     Actions performed:
         1. While object creation, admin restores previous state if it finds a backup dump file(data/.tmp.json)
@@ -65,4 +66,4 @@ User
 ------------------------------------------------------------------------------
 
 Runner just creates users and start the thread running.
-We have used "sudo killall -9 python", to crash the runner. And started over to check if it restores pre-crash state or not.
+We have used `sudo killall -9 python`, to crash the runner. And started over to check if it restores pre-crash state or not.
